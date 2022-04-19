@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Login from './Login';
 import Signup from './Signup'
+import EditProfile from './EditProfile'
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
@@ -13,7 +14,8 @@ root.render(
     <Routes>
       <Route path="/" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/editProfile" element={<EditProfile />} />
     </Routes>
-  </BrowserRouter>,
+  </BrowserRouter>
   </React.StrictMode>
 );
