@@ -1,0 +1,46 @@
+[
+    {
+        "id": 0,
+        "name":"Rose",
+        "age": 19,
+        "profile_pic": "profile_pics/placeholder.png",
+        "description":"I am really struggling in ASTR 101 right now",
+        "classes": ["ASTR 101"],
+        "availability": null,
+        "study-method": ["Online"],
+        "pair-group": ["Pair"]
+    },
+    {
+        "id": 1,
+        "name":"Aida",
+        "age": 22,
+        "profile_pic": "profile_pics/placeholder.png",
+        "description":"BUSI 102 is really kicking me in the ass right now lol",
+        "classes": ["BUSI 102"],
+        "availability": null,
+        "study-method": ["In person"],
+        "pair-group": ["Group"]
+    },
+    {
+        "id": 2,
+        "name":"Addison",
+        "age": 21,
+        "profile_pic": "profile_pics/placeholder.png",
+        "description":"I could really use help in POLI 236",
+        "classes": ["POLI 236"],
+        "availability": null,
+        "study-method": ["In person"],
+        "pair-group": ["Pair"]
+    },
+    {
+        "id": 3,
+        "name":"Cameron",
+        "age": 18,
+        "profile_pic": "profile_pics/placeholder.png",
+        "description":"BIO 101 with Professor Garland is insanely hard",
+        "classes": ["BIO 101"],
+        "availability": null,
+        "study-method": ["In person", "Online"],
+        "pair-group": ["Pair", "Group"]
+    }
+]
