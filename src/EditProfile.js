@@ -63,7 +63,7 @@ function EditProfile() {
     const classes = ['BIOL 101', 'ECON101']
 
     return (
-        <Stack id="profile-panel" direction="column" alignItems="center">
+        <Stack id="editprofile-panel" direction="column" alignItems="center">
             <h2>Create/Edit Profile</h2><br />
             <form onSubmit={handleSubmit}>
                 <Stack id="profile-form" direction="column" alignItems="center">

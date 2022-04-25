@@ -20,3 +20,12 @@ code {
 center{
   align-content: center !important;
 }
+
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;               
+  background-color:black;
+  height: 1px;
+}
