@@ -56,6 +56,7 @@ function EditProfile() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        navigate("/profile");
     }
     const methods = ['Pair', 'Group', 'In Person', 'Online'];
     const times = ['Mon. Morning', 'Mon. Afternoon', 'Tues. Morning', 'Tues. Afternoon', 'Wed. Morning', 'Wed. Afternoon', 'Thurs. Morning', 'Thurs. Afternoon', 'Fri. Morning', 'Fri. Afternoon', 'Sat. Morning', 'Sat. Afternoon', 'Sun. Morning', 'Sun. Afternoon'];
@@ -76,7 +77,7 @@ function EditProfile() {
                         value={birthday} onChange={e => setBirthday(e.target.value)} sx={{ m: 1, width: 250 }} /><br />
 
                     <p>Availability*</p>
-                    <FormControl sx={{ m: 1, width: 250, mb: 2 }}>
+                    <FormControl required sx={{ m: 1, width: 250, mb: 2 }}>
                         <InputLabel id="demo-multiple-checkbox-label">Availability</InputLabel>
                         <Select
                             labelId="demo-multiple-checkbox-label"

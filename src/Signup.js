@@ -14,6 +14,7 @@ function Signup(){
     const handleSubmit = (e) => {
         e.preventDefault()
         if(password != confirmPassword) setError("Passwords must match");
+        navigate("/editProfile");
     }
 
     return(
