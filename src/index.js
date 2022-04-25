@@ -17,7 +17,6 @@ window.swiped_left_users = []
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Login />} />
@@ -30,5 +29,4 @@ root.render(
       <Route path="/matches" element={<Matches />} />
     </Routes>
   </BrowserRouter>
-  </React.StrictMode>
 );
