@@ -8,6 +8,7 @@ import Swipe from './Swipe';
 import Match from './Match'
 import Profile from './Profile'
 import EndOfMatches from './EndOfMatches';
+import Matches from './Matches';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
@@ -26,6 +27,7 @@ root.render(
       <Route path="/endOfMatches" element={<EndOfMatches />} />
       <Route path="/match" element={<Match />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/matches" element={<Matches />} />
     </Routes>
   </BrowserRouter>
   </React.StrictMode>
