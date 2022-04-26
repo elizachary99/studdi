@@ -23,7 +23,7 @@ function Matches() {
         <Stack id="profile-panel" direction="column" alignItems="center">
             <h2>Matches</h2>
             <hr />
-            <Container maxWidth="sm" sx={{ height: "75vh" }}>
+            <Container maxWidth="lg">
                 {window.matched_users === undefined ? <></> : window.matched_users.map((m) => (
                     <Box key={users[m].name} borderRadius="10px" justifyContent="center" sx={{ marginTop: "10px", marginBottom: "10px", bgcolor: "#ededed" }}>
                         <Button>{users[m].name}: {replies[getRandomInt(5)]}</Button>
