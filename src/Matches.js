@@ -24,7 +24,7 @@ function Matches() {
             <hr />
             <Container maxWidth="sm" sx={{height:"75vh"}}>
                 {messages.map((m)=>(
-                    <Box borderRadius="10px" justifyContent="center" sx={{marginTop:"10px", marginBottom:"10px", bgcolor:"#ededed"}}>
+                    <Box key={m.user} borderRadius="10px" justifyContent="center" sx={{marginTop:"10px", marginBottom:"10px", bgcolor:"#ededed"}}>
                         <Button>{m.user}: {m.reply}</Button>
                     </Box>
                 ))}
