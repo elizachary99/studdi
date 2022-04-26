@@ -6,17 +6,12 @@ function Matches() {
 
     const navigate = useNavigate()
 
-    const replies = ["How's class?", "Hey wassup", "Hey, what is your major?", "Hey", "Hey, I guess we're a match"]
+    const replies = ["How's class?", "Hey wassup", "Hey, what is your major?", "Hey, I guess we're a match"]
 
-    const messages = [{user:"Addison A", matched:true, reply: replies[getRandomInt(5)]}, 
-                        {user:"Aida K", matched:true, reply: replies[getRandomInt(5)]}, 
-                            {user:"Cameron B", matched:true, reply: replies[getRandomInt(5)]}, 
-                                {user:"Rose H", matched:true, reply: replies[getRandomInt(5)]}]
-
-
-    function getRandomInt(max) {
-        return Math.floor(Math.random() * max);
-    }      
+    const messages = [{user:"Addison A", matched:true, reply: replies[0]}, 
+                        {user:"Aida K", matched:true, reply: replies[1]}, 
+                            {user:"Cameron B", matched:true, reply: replies[2]}, 
+                                {user:"Rose H", matched:true, reply: replies[3]}]
 
     return (
         <Stack id="profile-panel" direction="column" alignItems="center">
