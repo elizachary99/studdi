@@ -6,21 +6,27 @@ function Matches() {
 
     const navigate = useNavigate()
 
-    const replies = ["How's class?", "Hey wassup", "Hey, what is your major?", "Hey, I guess we're a match"]
+    const users = require("./users.json")
 
-    const messages = [{user:"Addison A", matched:true, reply: replies[0]}, 
-                        {user:"Aida K", matched:true, reply: replies[1]}, 
-                            {user:"Cameron B", matched:true, reply: replies[2]}, 
-                                {user:"Rose H", matched:true, reply: replies[3]}]
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
+
+    const replies = ["How's class?", "Hey wassup", "Hey, what is your major?", "Hey, I guess we're a match", "Hey"]
+
+    const messages = [{ user: "Addison A", matched: true, reply: replies[0] },
+    { user: "Aida K", matched: true, reply: replies[1] },
+    { user: "Cameron B", matched: true, reply: replies[2] },
+    { user: "Rose H", matched: true, reply: replies[3] }]
 
     return (
         <Stack id="profile-panel" direction="column" alignItems="center">
             <h2>Matches</h2>
             <hr />
-            <Container maxWidth="sm" sx={{height:"75vh"}}>
-                {messages.map((m)=>(
-                    <Box key={m.user} borderRadius="10px" justifyContent="center" sx={{marginTop:"10px", marginBottom:"10px", bgcolor:"#ededed"}}>
-                        <Button>{m.user}: {m.reply}</Button>
+            <Container maxWidth="sm" sx={{ height: "75vh" }}>
+                {window.matched_users === undefined ? <></> : window.matched_users.map((m) => (
+                    <Box key={users[m].name} borderRadius="10px" justifyContent="center" sx={{ marginTop: "10px", marginBottom: "10px", bgcolor: "#ededed" }}>
+                        <Button>{users[m].name}: {replies[getRandomInt(5)]}</Button>
                     </Box>
                 ))}
             </Container>
