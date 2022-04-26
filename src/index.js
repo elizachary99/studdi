@@ -14,6 +14,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 window.matched_users = []
 window.swiped_left_users = []
+window.preferences = {"firstName": "", "lastName": "", "birthday": new Date(), picture: "", "classes": [], "study-method": [], "pair-group": [], "availability": []}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

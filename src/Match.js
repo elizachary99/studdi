@@ -15,12 +15,17 @@ function Match(){
         else navigate("/endOfMatches")
     }
 
+    const handleUnmatch = (e) => {
+        window.swiped_left_users.push(window.matched_users.pop())
+        keepSwiping(null)
+    }
+
     return(
         <Stack id="match-panel" direction="column" alignItems="center">
             <div img="you-matched">You matched with {matchedUser.name}!</div><br />
             <img id="user-pic" src={matchedUser.profile_pic} alt={matchedUser.name} style={{width: "50%"}} /><br />
             <Button id="message" variant="contained" sx={{backgroundColor:"green"}} >Message</Button>
-            <Button id="unmatch" variant="contained" sx={{backgroundColor:"red"}} >Unmatch</Button>
+            <Button id="unmatch" variant="contained" sx={{backgroundColor:"red"}} onClick={handleUnmatch} >Unmatch</Button>
             <Button id="report" variant="contained" sx={{backgroundColor:"gray"}} >Report</Button>
             <br />
             <Button id="keep-swiping" variant="contained" onClick={keepSwiping} >Keep Swiping</Button>

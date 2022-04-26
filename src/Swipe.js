@@ -1,15 +1,11 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Stack, ButtonGroup, Button} from '@mui/material'
 import { Cancel, CheckCircle} from '@mui/icons-material'
 import {useNavigate} from 'react-router-dom'
 
 function Swipe(){
 
-    const user_prefs = {
-        "classes": ["ASTR 101", "BUSI 102", "POLI 236", "BIO 101"],
-        "study-method": ["In person", "Online"],
-        "pair-group": ["Pair", "Group"]
-    }
+    const user_prefs = window.preferences
 
     var compatible_users = []
     const users = require("./users.json")
@@ -26,6 +22,12 @@ function Swipe(){
 
     const navigate = useNavigate()
 
+    useEffect(() => {
+        if(compatible_users.length === 0){
+            navigate("/endOfMatches")
+        }
+    })
+
     const [u, setDisplayedUser] = useState(0)
 
     const swipeLeft = (e) => {
@@ -40,7 +42,7 @@ function Swipe(){
     }
 
     return(
-        <Stack id="swipe-panel" direction="column" alignItems="center">
+        compatible_users.length > 0 ? <Stack id="swipe-panel" direction="column" alignItems="center">
             <img id="user-pic" src={users[compatible_users[u]].profile_pic} alt={users[compatible_users[u]].name} style={{width: "50%", marginTop:"30px"}} /><br />
             <div id="user-name">{users[compatible_users[u]].name}</div>
             <div id="user-desc">{users[compatible_users[u]].description}</div><br />
@@ -62,6 +64,7 @@ function Swipe(){
                 <Button onClick={() => {navigate("/profile")}} sx={{color:"black"}}>Profile</Button>
             </ButtonGroup>
         </Stack>
+        : <div></div>
     )
 }
 

@@ -11,16 +11,17 @@ import Checkbox from '@mui/material/Checkbox';
 // import './index.css';
 
 function EditProfile() {
-    const [first, setFirst] = useState("")
-    const [last, setLast] = useState("")
-    const [birthday, setBirthday] = useState(new Date())
-    const [picture, setPicture] = useState()
+    const [first, setFirst] = useState(window.preferences.firstName)
+    const [last, setLast] = useState(window.preferences.lastName)
+    const [birthday, setBirthday] = useState(window.preferences.birthday)
+    const [picture, setPicture] = useState("")
     // const [studyType, setStudyType] = useState("No Preference")
     // const [studyLocation, setStudyLocation] = useState("No Preference")
     const [error, setError] = useState("\u00A0")
-    const [av, setAv] = useState([])
-    const [clas, setClas] = useState([])
-    const [method, setMethod] = useState([])
+    const [av, setAv] = useState(window.preferences.availability)
+    const [clas, setClas] = useState(window.preferences.classes)
+    const [method, setMethod] = useState(window.preferences["study-method"])
+    const [pairGroup, setPairGroup] = useState(window.preferences["pair-group"])
 
     const handleChangeA = (event) => {
         const {
@@ -52,15 +53,35 @@ function EditProfile() {
         );
     };
 
+    const handleChangePG = (event) => {
+        const {
+            target: { value },
+        } = event;
+        setPairGroup(
+            // On autofill we get a stringified value.
+            typeof value === 'string' ? value.split(',') : value,
+        );
+    };
+
     const navigate = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        const compare = window.preferences
+        window.preferences.firstName = first
+        window.preferences.lastName = last
+        window.preferences.birthday = birthday
+        window.preferences.picture = picture
+        window.preferences.classes = clas
+        window.preferences["study-method"] = method
+        window.preferences["pair-group"] = pairGroup
+        window.preferences.availability = av
         navigate("/profile");
     }
-    const methods = ['Pair', 'Group', 'In Person', 'Online'];
+    const methods = ['In Person', 'Online'];
+    const pairOrGroup = ['Pair', 'Group']
     const times = ['Mon. Morning', 'Mon. Afternoon', 'Tues. Morning', 'Tues. Afternoon', 'Wed. Morning', 'Wed. Afternoon', 'Thurs. Morning', 'Thurs. Afternoon', 'Fri. Morning', 'Fri. Afternoon', 'Sat. Morning', 'Sat. Afternoon', 'Sun. Morning', 'Sun. Afternoon'];
-    const classes = ['BIOL 101', 'ECON101']
+    const classes = ['ASTR 101', 'BIOL 101', 'BUSI 102', 'COMP 283', 'ECON 101', 'POLI 236']
 
     return (
         <Stack id="editprofile-panel" direction="column" alignItems="center" textAlign="center">
@@ -100,7 +121,7 @@ function EditProfile() {
                     <h3>Optional Preferences</h3><br />
 
                     <p>Profile Picture:</p>
-                        <input type="file" accept="image/*" multiple="false"
+                        <input type="file" accept="image/*" multiple={false}
                             value={picture} onChange={e => setPicture(e.target.value)} />
                     <br />
 
@@ -125,7 +146,7 @@ function EditProfile() {
                         </Select>
                     </FormControl>
 
-                    <p>Tell us some of your study methods:</p>
+                    <p>Study methods:</p>
                     <FormControl sx={{ m: 1, width: 250, mb: 2 }}>
                         <InputLabel id="demo-multiple-checkbox-label">Study Methods</InputLabel>
                         <Select
@@ -140,6 +161,27 @@ function EditProfile() {
                             {methods.map((m) => (
                                 <MenuItem key={m} value={m}>
                                     <Checkbox checked={method.indexOf(m) > -1} />
+                                    <ListItemText primary={m} />
+                                </MenuItem>
+                            ))}
+                        </Select>
+                    </FormControl>
+
+                    <p>Pair or group:</p>
+                    <FormControl sx={{ m: 1, width: 250, mb: 2 }}>
+                        <InputLabel id="demo-multiple-checkbox-label">Pair or group</InputLabel>
+                        <Select
+                            labelId="demo-multiple-checkbox-label"
+                            id="demo-multiple-checkbox"
+                            multiple={true}
+                            value={pairGroup}
+                            onChange={handleChangePG}
+                            input={<OutlinedInput label="Pair or group" />}
+                            renderValue={(selected) => selected.join(', ')}
+                        >
+                            {pairOrGroup.map((m) => (
+                                <MenuItem key={m} value={m}>
+                                    <Checkbox checked={pairGroup.indexOf(m) > -1} />
                                     <ListItemText primary={m} />
                                 </MenuItem>
                             ))}
