@@ -4,7 +4,7 @@ import {useNavigate} from 'react-router-dom'
 
 function Signup(){
 
-    const [edu, setEdu] = useState("")
+    const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
     const [error, setError] = useState("\u00A0")
@@ -22,8 +22,8 @@ function Signup(){
             <div>Create Account</div><br />
             <form onSubmit={handleSubmit}>
                 <Stack id="login-form" direction="column" alignItems="center">
-                    <TextField id="edu" label='University Email' required
-                        value={edu} onChange={e => setEdu(e.target.value)} /><br />
+                    <TextField id="username" label='Username' required
+                        value={username} onChange={e => setUsername(e.target.value)} /><br />
                     <TextField id='password' label='Password' type='password' required
                         value={password} onChange={e => setPassword(e.target.value)} /><br />
                     <TextField id='confirm-password' label='Confirm Password' type='password' required

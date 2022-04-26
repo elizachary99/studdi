@@ -47,7 +47,7 @@ function Swipe(){
             <div id="user-name">{users[compatible_users[u]].name}</div>
             <div id="user-desc">{users[compatible_users[u]].description}</div><br />
             <div id="classes">Classes:</div>
-            <div id="user-classes">{users[compatible_users[u]].classes}</div><br />
+            <div id="user-classes">{users[compatible_users[u]].classes.map((m,ix)=> ix==users[compatible_users[u]].classes.length-1 ? <>{m}</> : <>{m}, </>)}</div><br />
             <div id="availability">Availability:</div>
             <div id="user-availability">placeholder</div><br />
             <div id="study-method">Study Method:</div>
