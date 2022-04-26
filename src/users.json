@@ -6,7 +6,7 @@
         "profile_pic": "profile_pics/0.png",
         "description":"I am really struggling in ASTR 101 right now.",
         "classes": ["ASTR 101", "BUSI 102"],
-        "availability": null,
+        "availability": ["Mon. Morning", "Mon Afternoon", "Tues. Afternoon", "Fri. Afternoon"],
         "study-method": ["Online"],
         "pair-group": ["Pair"]
     },
@@ -17,7 +17,7 @@
         "profile_pic": "profile_pics/1.png",
         "description":"BUSI 102 is really kicking me in the ass right now lol",
         "classes": ["BUSI 102", "POLI 236"],
-        "availability": null,
+        "availability": ["Mon. Morning", "Mon Afternoon", "Sat. Afternoon", "Sun. Morning", "Sun. Afternoon"],
         "study-method": ["In Person"],
         "pair-group": ["Group"]
     },
@@ -28,7 +28,7 @@
         "profile_pic": "profile_pics/2.png",
         "description":"I could really use help in POLI 236",
         "classes": ["BIOL 101", "POLI 236"],
-        "availability": null,
+        "availability": [],
         "study-method": ["In Person"],
         "pair-group": ["Pair"]
     },
@@ -39,7 +39,7 @@
         "profile_pic": "profile_pics/3.png",
         "description":"BIOL 101 with Professor Garland is insanely hard",
         "classes": ["BIOL 101", "COMP 283"],
-        "availability": null,
+        "availability": [],
         "study-method": ["In Person", "Online"],
         "pair-group": ["Pair", "Group"]
     },
@@ -50,7 +50,7 @@
         "profile_pic": "profile_pics/4.jpg",
         "description":"Help! I didn't become a CS major to do *math*!",
         "classes": ["COMP 283", "ECON 101"],
-        "availability": null,
+        "availability": [],
         "study-method": ["In Person", "Online"],
         "pair-group": ["Pair"]
     },
@@ -61,7 +61,7 @@
         "profile_pic": "profile_pics/5.jpg",
         "description":"Stupid gen-ed classes... I'm a Drama major.",
         "classes": ["ASTR 101", "ECON 101"],
-        "availability": null,
+        "availability": [],
         "study-method": ["Online"],
         "pair-group": ["Pair", "Group"]
     },
@@ -72,7 +72,7 @@
         "profile_pic": "profile_pics/6.jpg",
         "description":"I need help memorizing all this astronomy vocab.",
         "classes": ["ASTR 101", "POLI 236"],
-        "availability": null,
+        "availability": [],
         "study-method": ["In Person", "Online"],
         "pair-group": ["Pair", "Group"]
     },
@@ -83,7 +83,7 @@
         "profile_pic": "profile_pics/7.jpg",
         "description":"who would have thought bio 101 is so hard! it's not like we have a med school here or anything.",
         "classes": ["BIOL 101", "BUSI 102"],
-        "availability": null,
+        "availability": [],
         "study-method": ["In Person", "Online"],
         "pair-group": ["Pair", "Group"]
     },
@@ -94,7 +94,7 @@
         "profile_pic": "profile_pics/8.jpg",
         "description":"What's a pumping lemma? Can I buy one at a hardware store?",
         "classes": ["ASTR 101", "COMP 283"],
-        "availability": null,
+        "availability": [],
         "study-method": ["In Person"],
         "pair-group": ["Pair"]
     },
@@ -105,7 +105,7 @@
         "profile_pic": "profile_pics/9.jpg",
         "description":"Honestly, what I need to study most is how to spell Snoeyink's name.",
         "classes": ["ASTR 101", "POLI 263", "COMP 283"],
-        "availability": null,
+        "availability": [],
         "study-method": ["Online"],
         "pair-group": ["Group"]
     },
@@ -116,7 +116,7 @@
         "profile_pic": "profile_pics/10.jpg",
         "description":"Taking a business class was a real clown moment on my part",
         "classes": ["BUSI 102", "ECON 101", "COMP 283"],
-        "availability": null,
+        "availability": [],
         "study-method": ["Online"],
         "pair-group": ["Pair"]
     },
@@ -127,7 +127,7 @@
         "profile_pic": "profile_pics/11.jpg",
         "description":"so how big is jupiter like the size of texas",
         "classes": ["ASTR 101", "BIOL 101"],
-        "availability": null,
+        "availability": [],
         "study-method": ["In Person", "Online"],
         "pair-group": ["Pair", "Group"]
     },
@@ -138,7 +138,7 @@
         "profile_pic": "profile_pics/12.jpg",
         "description":"why did i let my grandpa talk me into taking a business class... :(",
         "classes": ["BUSI 102", "COMP 283"],
-        "availability": null,
+        "availability": [],
         "study-method": ["Online"],
         "pair-group": ["Pair", "Group"]
     },
@@ -149,7 +149,7 @@
         "profile_pic": "profile_pics/13.jpg",
         "description":"Can SOMEBODY explain to me how the Politburo actually did anything?",
         "classes": ["ECON 101", "POLI 236"],
-        "availability": null,
+        "availability": [],
         "study-method": ["In Person"],
         "pair-group": ["Group"]
     },
@@ -160,7 +160,7 @@
         "profile_pic": "profile_pics/14.jpg",
         "description":"lmao",
         "classes": ["COMP 283", "POLI 236"],
-        "availability": null,
+        "availability": [],
         "study-method": ["In Person"],
         "pair-group": ["Pair", "Group"]
     },
@@ -171,7 +171,7 @@
         "profile_pic": "profile_pics/15.jpg",
         "description":"ECON 101... We really do live in a society, huh.",
         "classes": ["BIOL 101","ECON 101"],
-        "availability": null,
+        "availability": [],
         "study-method": ["In Person", "Online"],
         "pair-group": ["Pair", "Group"]
     }
