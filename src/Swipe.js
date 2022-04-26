@@ -49,11 +49,11 @@ function Swipe(){
             <div id="classes">Classes:</div>
             <div id="user-classes">{users[compatible_users[u]].classes.map((m,ix)=> ix==users[compatible_users[u]].classes.length-1 ? <>{m}</> : <>{m}, </>)}</div><br />
             <div id="availability">Availability:</div>
-            <div id="user-availability">placeholder</div><br />
+            <div id="user-availability">{users[compatible_users[u]].availability.map((m,ix)=> ix==users[compatible_users[u]].availability.length-1 ? <>{m}</> : <>{m}, </>)}</div><br />
             <div id="study-method">Study Method:</div>
-            <div id="user-study-method">{users[compatible_users[u]]['study-method']}</div><br />
+            <div id="user-study-method">{users[compatible_users[u]]['study-method'].map((m,ix)=> ix==users[compatible_users[u]]['study-method'].length-1 ? <>{m}</> : <>{m} or  </>)}</div><br />
             <div id="pair-group">Pair or Group:</div>
-            <div id="user-pair-group">{users[compatible_users[u]]['pair-group']}</div>
+            <div id="user-pair-group">{users[compatible_users[u]]['pair-group'].map((m,ix)=> ix==users[compatible_users[u]]['pair-group'].length-1 ? <>{m}</> : <>{m} or  </>)}</div>
             <Stack id="swipe-icons" direction="row" spacing={10} >
                 <Cancel id="swipe-left" sx={{color: "red"}} fontSize="large" onClick={swipeLeft} />
                 <CheckCircle id="swipe-right" sx={{color:"green"}} fontSize="large" onClick={swipeRight} />
