@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { Stack, ButtonGroup, Button} from '@mui/material'
 import { Cancel, CheckCircle} from '@mui/icons-material'
 import {useNavigate} from 'react-router-dom'
+import { padding } from '@mui/system'
+import './Swipe.css';
 
 function Swipe(){
 
@@ -44,16 +46,16 @@ function Swipe(){
     return(
         compatible_users.length > 0 ? <Stack id="swipe-panel" direction="column" alignItems="center">
             <img id="user-pic" src={users[compatible_users[u]].profile_pic} alt={users[compatible_users[u]].name} style={{width: "50%", marginTop:"30px"}} /><br />
-            <div id="user-name">{users[compatible_users[u]].name}</div>
-            <div id="user-desc">{users[compatible_users[u]].description}</div><br />
-            <div id="classes">Classes:</div>
-            <div id="user-classes">{users[compatible_users[u]].classes.map((m,ix)=> ix==users[compatible_users[u]].classes.length-1 ? <>{m}</> : <>{m}, </>)}</div><br />
-            <div id="availability">Availability:</div>
-            <div id="user-availability">{users[compatible_users[u]].availability.map((m,ix)=> ix==users[compatible_users[u]].availability.length-1 ? <>{m}</> : <>{m}, </>)}</div><br />
-            <div id="study-method">Study Method:</div>
-            <div id="user-study-method">{users[compatible_users[u]]['study-method'].map((m,ix)=> ix==users[compatible_users[u]]['study-method'].length-1 ? <>{m}</> : <>{m} or  </>)}</div><br />
-            <div id="pair-group">Pair or Group:</div>
-            <div id="user-pair-group">{users[compatible_users[u]]['pair-group'].map((m,ix)=> ix==users[compatible_users[u]]['pair-group'].length-1 ? <>{m}</> : <>{m} or  </>)}</div>
+            <div id="user-name"><strong>{users[compatible_users[u]].name}</strong></div>
+            <div id="user-desc" class="userInput">{users[compatible_users[u]].description}</div><br />
+            <div id="classes"><strong>Classes:</strong></div>
+            <div id="user-classes" class="userInput">{users[compatible_users[u]].classes.map((m,ix)=> ix==users[compatible_users[u]].classes.length-1 ? <>{m}</> : <>{m}, </>)}</div><br />
+            <div id="availability"><strong>Availability:</strong></div>
+            <div id="user-availability" class="userInput">{users[compatible_users[u]].availability.map((m,ix)=> ix==users[compatible_users[u]].availability.length-1 ? <>{m}</> : <>{m}, </>)}</div><br />
+            <div id="study-method"><strong>Study Method:</strong></div>
+            <div id="user-study-method" class="userInput">{users[compatible_users[u]]['study-method'].map((m,ix)=> ix==users[compatible_users[u]]['study-method'].length-1 ? <>{m}</> : <>{m} or  </>)}</div><br />
+            <div id="pair-group"><strong>Pair or Group:</strong></div>
+            <div id="user-pair-group" class="userInput">{users[compatible_users[u]]['pair-group'].map((m,ix)=> ix==users[compatible_users[u]]['pair-group'].length-1 ? <>{m}</> : <>{m} or  </>)}</div>
             <Stack id="swipe-icons" direction="row" spacing={10} >
                 <Cancel id="swipe-left" sx={{color: "red"}} fontSize="large" onClick={swipeLeft} />
                 <CheckCircle id="swipe-right" sx={{color:"green"}} fontSize="large" onClick={swipeRight} />
