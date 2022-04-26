@@ -17,7 +17,7 @@ function Login(){
 
     return(
         <Stack id="login-panel" direction="column" alignItems="center">
-            <img id="studdi-logo" alt="Studdi" src="/logo1.png" style={{width: "100%"}}></img><br />
+            <img id="studdi-logo" alt="Studdi" src="/logo1.png" style={{width: "100%", marginTop:"30px"}}></img><br />
             <form onSubmit={handleSubmit}>
                 <Stack id="login-form" direction="column" alignItems="center">
                     <TextField id="username" label='Username' required
