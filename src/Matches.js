@@ -26,7 +26,7 @@ function Matches() {
             <Container maxWidth="lg">
                 {window.matched_users === undefined ? <></> : window.matched_users.map((m) => (
                     <Box key={users[m].name} borderRadius="10px" justifyContent="center" sx={{ marginTop: "10px", marginBottom: "10px", bgcolor: "#ededed" }}>
-                        <Button>{users[m].name}: {replies[getRandomInt(5)]}</Button>
+                        <Button onClick={e => navigate("/messenger?name=" + (users[m].name))}>{users[m].name}: {replies[getRandomInt(5)]}</Button>
                     </Box>
                 ))}
             </Container>

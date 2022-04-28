@@ -10,6 +10,7 @@ import Profile from './Profile'
 import EndOfMatches from './EndOfMatches';
 import Matches from './Matches';
 import Report from './Report';
+import Messenger from './Messenger';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
@@ -30,6 +31,7 @@ root.render(
       <Route path="/profile" element={<Profile />} />
       <Route path="/matches" element={<Matches />} />
       <Route path="/report" element={<Report />} />
+      <Route path="/messenger" element={<Messenger />} />
     </Routes>
   </BrowserRouter>
 );
