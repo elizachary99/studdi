@@ -6,12 +6,13 @@ function Messenger() {
     const users = require("./users.json");
     const [searchParams, setSearchParams] = useSearchParams();
     const name = searchParams.get("name");
-    const matchedUser = users.filter(u => u.name == name);;
+    const matchedUser = users.filter(u => u.name == name);
 
     const navigate = useNavigate()
 
     const handleUnmatch = (e) => {
-        window.swiped_left_users.push(window.matched_users.pop())
+        window.matched_users = window.matched_users.filter(u => u != matchedUser[0].id);
+        window.swiped_left_users.push(matchedUser[0].id);
         navigate("/matches");
     }
 
