@@ -16,11 +16,10 @@ function Report(){
 
     return(
         <Stack id="match-panel" direction="column" alignItems="center">
-            <div img="you-matched">Why do you want to report {matchedUser.name}?</div><br />
-            <img id="user-pic" src={matchedUser.profile_pic} alt={matchedUser.name} style={{width: "50%"}} /><br />
-            <TextField id="report" label='Report' sx={{ m: 1, width: 250 }} /><br />
+            <h2>Why do you want to report this user?</h2><br />
+            <TextField id="report" label='Report' sx={{ m: 1, width: 250}}/><br />
             <Button id="report" variant="contained" sx={{backgroundColor:"red"}} onClick={handleUnmatch}>Report</Button>
-            <Button id="cancel" variant="contained" sx={{backgroundColor:"gray"}} onClick={navigate("/matches")}>Cancel</Button>
+            <Button id="cancel" variant="contained" sx={{backgroundColor:"gray"}} onClick={e => navigate("/matches")}>Cancel</Button>
         </Stack>
     )
 
