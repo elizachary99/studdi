@@ -24,7 +24,7 @@ function Match(){
         <Stack id="match-panel" direction="column" alignItems="center">
             <div img="you-matched">You matched with {matchedUser.name}!</div><br />
             <img id="user-pic" src={matchedUser.profile_pic} alt={matchedUser.name} style={{width: "50%"}} /><br />
-            <Button id="message" variant="contained" sx={{backgroundColor:"green"}} >Message</Button>
+            <Button id="message" variant="contained" sx={{backgroundColor:"green"}} onClick={e => navigate("/messenger?name=" + (matchedUser.name))} >Message</Button>
             <Button id="unmatch" variant="contained" sx={{backgroundColor:"red"}} onClick={handleUnmatch} >Unmatch</Button>
             <Button id="report" variant="contained" sx={{backgroundColor:"gray"}} onClick={e => navigate("/report")}>Report</Button>
             <br />
