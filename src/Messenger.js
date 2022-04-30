@@ -20,14 +20,17 @@ function Messenger() {
     return (
         <Stack id="match-panel" direction="column" alignItems="center">
             <ButtonGroup variant="contained" sx={{ marginTop: "30px" }} aria-label="outlined primary button group">
-                <Button onClick={() => {navigate("/matches")}} sx={{color:"black"}}>Back</Button>
-                <Button onClick={handleUnmatch} sx={{color:"black"}}>Unmatch</Button>
-                <Button onClick={() => {navigate("/report?id=" + (matchedUser[0].id))}} sx={{color:"black"}}>Report</Button>
+                <Button onClick={() => { navigate("/matches") }} sx={{ color: "white", backgroundColor: "green" }}>Back</Button>
+                <Button onClick={handleUnmatch} sx={{ color: "white", backgroundColor: "red" }}>Unmatch</Button>
+                <Button onClick={() => { navigate("/report?id=" + (matchedUser[0].id)) }} sx={{ color: "white", backgroundColor: "gray" }}>Report</Button>
             </ButtonGroup>
             <h2>{matchedUser[0].name}</h2>
-            <hr/>
-            <br />
-            <TextField id="message" label='Send a message...' sx={{ m: 1, width: 250}}/><br />
+            <hr />
+            <Box key={matchedUser[0].name} padding="5px" borderRadius="10px" justifyContent="center" sx={{ marginTop: "10px", marginBottom: "10px", bgcolor: "#cfe8fc" }}>
+                <p>{matchedUser[0].reply}</p>
+            </Box>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <TextField id="message" label='Send a message...' sx={{ m: 1, width: 250 }} /><br />
         </Stack>
     )
 
