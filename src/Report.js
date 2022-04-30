@@ -3,21 +3,24 @@ import { useNavigate, useSearchParams } from "react-router-dom"
 
 function Report(){
 
-    const users = require("./users.json")
-    const matchedUser = users[window.matched_users[window.matched_users.length-1]]
+    const users = require("./users.json");
+    const [searchParams, setSearchParams] = useSearchParams();
+    const uid = searchParams.get("id");
+    const matchedUser = users.filter(u => u.id == uid);
 
     const navigate = useNavigate()
 
     const handleUnmatch = (e) => {
-        window.swiped_left_users.push(window.matched_users.pop())
+        window.matched_users = window.matched_users.filter(u => u != matchedUser[0].id);
+        window.swiped_left_users.push(matchedUser[0].id);
         navigate("/matches");
     }
 
 
     return(
         <Stack id="match-panel" direction="column" alignItems="center">
-            <h2>Why do you want to report {matchedUser.name}?</h2><br />
-            <img id="user-pic" src={matchedUser.profile_pic} alt={matchedUser.name} style={{width: "50%"}} /><br />
+            <h2>Why do you want to report {matchedUser[0].name}?</h2><br />
+            <img id="user-pic" src={matchedUser[0].profile_pic} alt={matchedUser[0].name} style={{width: "50%"}} /><br />
             <TextField id="report" label='Report' sx={{ m: 1, width: 250}}/><br />
             <Button id="report" variant="contained" sx={{backgroundColor:"red"}} onClick={handleUnmatch}>Report</Button>
             <Button id="cancel" variant="contained" sx={{backgroundColor:"gray"}} onClick={e => navigate("/matches")}>Cancel</Button>

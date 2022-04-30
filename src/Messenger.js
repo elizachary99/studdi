@@ -5,8 +5,8 @@ function Messenger() {
 
     const users = require("./users.json");
     const [searchParams, setSearchParams] = useSearchParams();
-    const name = searchParams.get("name");
-    const matchedUser = users.filter(u => u.name == name);
+    const uid = searchParams.get("id");
+    const matchedUser = users.filter(u => u.id == uid);
 
     const navigate = useNavigate()
 
@@ -22,7 +22,7 @@ function Messenger() {
             <ButtonGroup variant="contained" sx={{ marginTop: "30px" }} aria-label="outlined primary button group">
                 <Button onClick={() => {navigate("/matches")}} sx={{color:"black"}}>Back</Button>
                 <Button onClick={handleUnmatch} sx={{color:"black"}}>Unmatch</Button>
-                <Button onClick={() => {navigate("/report")}} sx={{color:"black"}}>Report</Button>
+                <Button onClick={() => {navigate("/report?id=" + (matchedUser[0].id))}} sx={{color:"black"}}>Report</Button>
             </ButtonGroup>
             <h2>{matchedUser[0].name}</h2>
             <hr/>
