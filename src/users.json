@@ -8,7 +8,8 @@
         "classes": ["ASTR 101", "BUSI 102"],
         "availability": ["Mon. Morning", "Mon Afternoon", "Tues. Afternoon", "Fri. Afternoon"],
         "study-method": ["Online"],
-        "pair-group": ["Pair"]
+        "pair-group": ["Pair"],
+        "reply": "How's class?"
     },
     {
         "id": 1,
@@ -19,7 +20,8 @@
         "classes": ["BUSI 102", "POLI 236"],
         "availability": ["Mon. Morning", "Mon Afternoon", "Sat. Afternoon", "Sun. Morning", "Sun. Afternoon"],
         "study-method": ["In Person"],
-        "pair-group": ["Group"]
+        "pair-group": ["Group"],
+        "reply": "Hey wassup"
     },
     {
         "id": 2,
@@ -32,7 +34,8 @@
             "Wed. Morning", "Wed. Afternoon", "Thurs. Morning", "Thurs. Afternoon", "Fri. Morning", 
             "Fri. Afternoon", "Sat. Morning", "Sat. Afternoon", "Sun. Morning", "Sun. Afternoon"],
         "study-method": ["In Person"],
-        "pair-group": ["Pair"]
+        "pair-group": ["Pair"],
+        "reply": "Hey, what is your major?"
     },
     {
         "id": 3,
@@ -44,7 +47,8 @@
         "availability": ["Tues. Morning", "Tues. Afternoon", "Wed. Morning", "Wed. Afternoon", "Thurs. Morning", 
             "Thurs. Afternoon", "Fri. Morning", "Fri. Afternoon", "Sat. Morning", "Sat. Afternoon", "Sun. Morning", "Sun. Afternoon"],
         "study-method": ["In Person", "Online"],
-        "pair-group": ["Pair", "Group"]
+        "pair-group": ["Pair", "Group"],
+        "reply": "Hey, I guess we're a match"
     },
     {
         "id": 4,
@@ -56,7 +60,8 @@
         "availability": ["Mon. Afternoon", "Tues. Afternoon", "Wed. Afternoon", "Thurs. Afternoon", "Fri. Afternoon", 
             "Sat. Afternoon", "Sun. Afternoon"],
         "study-method": ["In Person", "Online"],
-        "pair-group": ["Pair"]
+        "pair-group": ["Pair"],
+        "reply": "Hey"
     },
     {
         "id": 5,
@@ -69,7 +74,8 @@
             "Wed. Morning", "Wed. Afternoon", "Thurs. Morning", "Thurs. Afternoon", "Fri. Morning", 
             "Fri. Afternoon", "Sat. Morning", "Sat. Afternoon", "Sun. Morning", "Sun. Afternoon"],
         "study-method": ["Online"],
-        "pair-group": ["Pair", "Group"]
+        "pair-group": ["Pair", "Group"],
+        "reply": "How's class?"
     },
     {
         "id": 6,
@@ -82,7 +88,8 @@
             "Wed. Morning", "Wed. Afternoon", "Thurs. Morning", "Thurs. Afternoon", "Fri. Morning", 
             "Fri. Afternoon", "Sat. Morning", "Sat. Afternoon", "Sun. Morning", "Sun. Afternoon"],
         "study-method": ["In Person", "Online"],
-        "pair-group": ["Pair", "Group"]
+        "pair-group": ["Pair", "Group"],
+        "reply": "Hey wassup"
     },
     {
         "id": 7,
@@ -95,7 +102,8 @@
             "Wed. Morning", "Wed. Afternoon", "Thurs. Morning", "Thurs. Afternoon", "Fri. Morning", 
             "Fri. Afternoon", "Sat. Morning", "Sat. Afternoon", "Sun. Morning", "Sun. Afternoon"],
         "study-method": ["In Person", "Online"],
-        "pair-group": ["Pair", "Group"]
+        "pair-group": ["Pair", "Group"],
+        "reply": "Hey, what is your major?"
     },
     {
         "id": 8,
@@ -108,7 +116,8 @@
             "Wed. Morning", "Wed. Afternoon", "Thurs. Morning", "Thurs. Afternoon", "Fri. Morning", 
             "Fri. Afternoon", "Sat. Morning", "Sat. Afternoon", "Sun. Morning", "Sun. Afternoon"],
         "study-method": ["In Person"],
-        "pair-group": ["Pair"]
+        "pair-group": ["Pair"],
+        "reply": "Hey, I guess we're a match"
     },
     {
         "id": 9,
@@ -121,7 +130,8 @@
             "Wed. Morning", "Wed. Afternoon", "Thurs. Morning", "Thurs. Afternoon", "Fri. Morning", 
             "Fri. Afternoon", "Sat. Morning", "Sat. Afternoon", "Sun. Morning", "Sun. Afternoon"],
         "study-method": ["Online"],
-        "pair-group": ["Group"]
+        "pair-group": ["Group"],
+        "reply": "Hey"
     },
     {
         "id": 10,
@@ -134,7 +144,8 @@
             "Wed. Morning", "Wed. Afternoon", "Thurs. Morning", "Thurs. Afternoon", "Fri. Morning", 
             "Fri. Afternoon", "Sat. Morning", "Sat. Afternoon", "Sun. Morning", "Sun. Afternoon"],
         "study-method": ["Online"],
-        "pair-group": ["Pair"]
+        "pair-group": ["Pair"],
+        "reply": "How's class?"
     },
     {
         "id": 11,
@@ -147,7 +158,8 @@
             "Wed. Morning", "Wed. Afternoon", "Thurs. Morning", "Thurs. Afternoon", "Fri. Morning", 
             "Fri. Afternoon", "Sat. Morning", "Sat. Afternoon", "Sun. Morning", "Sun. Afternoon"],
         "study-method": ["In Person", "Online"],
-        "pair-group": ["Pair", "Group"]
+        "pair-group": ["Pair", "Group"],
+        "reply": "Hey wassup"
     },
     {
         "id": 12,
@@ -160,7 +172,8 @@
             "Wed. Morning", "Wed. Afternoon", "Thurs. Morning", "Thurs. Afternoon", "Fri. Morning", 
             "Fri. Afternoon", "Sat. Morning", "Sat. Afternoon", "Sun. Morning", "Sun. Afternoon"],
         "study-method": ["Online"],
-        "pair-group": ["Pair", "Group"]
+        "pair-group": ["Pair", "Group"],
+        "reply": "Hey, what is your major?"
     },
     {
         "id": 13,
@@ -173,7 +186,8 @@
             "Wed. Morning", "Wed. Afternoon", "Thurs. Morning", "Thurs. Afternoon", "Fri. Morning", 
             "Fri. Afternoon", "Sat. Morning", "Sat. Afternoon", "Sun. Morning", "Sun. Afternoon"],
         "study-method": ["In Person"],
-        "pair-group": ["Group"]
+        "pair-group": ["Group"],
+        "reply": "Hey, I guess we're a match"
     },
     {
         "id": 14,
@@ -186,7 +200,8 @@
             "Wed. Morning", "Wed. Afternoon", "Thurs. Morning", "Thurs. Afternoon", "Fri. Morning", 
             "Fri. Afternoon", "Sat. Morning", "Sat. Afternoon", "Sun. Morning", "Sun. Afternoon"],
         "study-method": ["In Person"],
-        "pair-group": ["Pair", "Group"]
+        "pair-group": ["Pair", "Group"],
+        "reply": "Hey"
     },
     {
         "id": 15,
@@ -199,6 +214,7 @@
             "Wed. Morning", "Wed. Afternoon", "Thurs. Morning", "Thurs. Afternoon", "Fri. Morning", 
             "Fri. Afternoon", "Sat. Morning", "Sat. Afternoon", "Sun. Morning", "Sun. Afternoon"],
         "study-method": ["In Person", "Online"],
-        "pair-group": ["Pair", "Group"]
+        "pair-group": ["Pair", "Group"],
+        "reply": "How's class?"
     }
 ]
